@@ -1,15 +1,12 @@
 print("temperature converter")
 
 def c_f(c):
-    f=c*9/5+32
+    f=c*1.8+32
     print(f)
 
 
-
-
-
 def f_c(f):
-    c=f-32*5/9
+    c=(f-32)/1.8
     print(c)
 
 while True:
@@ -18,12 +15,14 @@ while True:
     print("2.fahrenhiet to celsius")
     print("3.exit")
 
-    if input=="1":
-        ask=input("what temp you wanna covert?")
+    choice=input("chose option 1-3")
+
+    if choice=="1":
+        ask=float(input("what temp you wanna covert?"))
         c_f(ask)
 
-    elif input=="2":
-        ask=input("what temp you wanna covert?")
+    elif choice=="2":
+        ask=float(input("what temp you wanna covert?"))
         f_c(ask)
-    elif input=="3":
+    elif choice=="3":
         break
